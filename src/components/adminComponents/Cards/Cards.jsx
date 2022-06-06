@@ -1,14 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './cards.scss'
-import axios from 'axios'
-import Sidebar from '../sidebar/Sidebar'
-import Navbar from '../navbar/Navbar'
 import Card from '../card/card'
-import BreadCrumb from '../breadcrumb/BreadCrumb'
-import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import AddIcon from '@mui/icons-material/Add';
 import { fetchCars } from '../../API/Api';
 import Box from '@mui/material/Box';
 import LinearProgress from '@mui/material/LinearProgress';

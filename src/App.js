@@ -8,15 +8,10 @@ import axios from 'axios';
 import { AppContext } from './contexts/app-context';
 import jwt_decode from 'jwt-decode';
 import HomeLayout from './layouts/HomeLayout';
-import UserProtectedRoute from './routes/UserProtectedRoute';
-import AdminProtectedRoute from './routes/AdminProtectedRoute';
 import Dashboard from './layouts/adminLayouts/dashboard/Dashboard';
 import New from './layouts/adminLayouts/new/New';
 import Edit from './layouts/adminLayouts/edit/Edit';
-import { productInputs, userInputs } from "./formSource";
-import Cards from './components/adminComponents/Cards/Cards';
-import AdminLayout from './layouts/adminLayouts/adminLayout/AdminLayout';
-import Test from './layouts/adminLayouts/carsLayout/CarsLayout'
+import { productInputs} from "./formSource";
 import CarsLayout from './layouts/adminLayouts/carsLayout/CarsLayout';
 
 function App() {

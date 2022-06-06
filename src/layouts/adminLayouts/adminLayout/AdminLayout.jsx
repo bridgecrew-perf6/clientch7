@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
 import {Link, useParams, useLocation} from "react-router-dom";
 import Box from '@mui/material/Box';
@@ -16,11 +16,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-import Sidebar from '../../../components/adminComponents/sidebar/Sidebar'
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
 import BreadCrumb from '../../../components/adminComponents/breadcrumb/BreadCrumb'

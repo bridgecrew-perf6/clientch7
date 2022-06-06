@@ -51,7 +51,7 @@ export default function DetailCard() {
 
         useEffect(() => {
             fetchcarByID()
-    }, [dispatch])
+        })
 
 
     const classes = useStyles()

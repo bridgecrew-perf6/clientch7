@@ -3,19 +3,18 @@ import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUpload
 import { useState } from "react"; 
 import AdminLayout from "../adminLayout/AdminLayout"
 import { useNavigate } from "react-router-dom";
-import MenuItem from '@mui/material/MenuItem';
 import NativeSelect from '@mui/material/NativeSelect';
 
 const New = ({ subTitle }) => {
   const navigate = useNavigate();
   const [file, setFile] = useState("");
   const [loadingButton, setLoadingButton] = useState(false)
-  const values = { 
-    someDate: new Date().toISOString().substring(0, 10),
-    someHours: new Date().getHours(),
-    someMinutes: new Date().getMinutes(),
-   };
-  const fullDate = `${values.someDate}T${values.someHours}:${values.someMinutes}`
+  // const values = { 
+  //   someDate: new Date().toISOString().substring(0, 10),
+  //   someHours: new Date().getHours(),
+  //   someMinutes: new Date().getMinutes(),
+  //  };
+  // const fullDate = `${values.someDate}T${values.someHours}:${values.someMinutes}`
   const [data, setData] = useState({
     name: "",
     image: "",

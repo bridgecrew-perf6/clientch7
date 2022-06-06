@@ -1,4 +1,4 @@
-import React, { PureComponent, useEffect, useState }  from 'react'
+import React, { useEffect, useState }  from 'react'
 import './chart.scss'
 import axios from 'axios';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';

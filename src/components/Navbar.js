@@ -76,7 +76,7 @@ function Navbar() {
             <div className={classes.link}>
                 <Avatar>
                 <img
-                  src={context.email=='user@gmail.com' ? (logo) : (context.user.photos[0].value)}
+                  src={context.email==='user@gmail.com' ? (logo) : (context.user.photos[0].value)}
                   alt="gambar"
                   className="avatar"
                 />

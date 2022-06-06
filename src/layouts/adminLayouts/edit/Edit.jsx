@@ -1,6 +1,4 @@
 import "./edit.scss";
-import Sidebar from "../../../components/adminComponents/sidebar/Sidebar";
-import Navbar from "../../../components/adminComponents/navbar/Navbar";
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 import { useEffect, useState } from "react";
 import AdminLayout from "../adminLayout/AdminLayout"
@@ -10,12 +8,12 @@ import NativeSelect from '@mui/material/NativeSelect';
 const Edit = ({ inputs, subTitle}) => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const values = { 
-    someDate: new Date().toISOString().substring(0, 10),
-    someHours: new Date().getHours(),
-    someMinutes: new Date().getMinutes(),
-   };
-  const fullDate = `${values.someDate}T${values.someHours}:${values.someMinutes}`
+  // const values = { 
+  //   someDate: new Date().toISOString().substring(0, 10),
+  //   someHours: new Date().getHours(),
+  //   someMinutes: new Date().getMinutes(),
+  //  };
+  // const fullDate = `${values.someDate}T${values.someHours}:${values.someMinutes}`
   const [file, setFile] = useState("");
   const [loadingButton, setLoadingButton] = useState(false)
   const [data, setData] = useState({
@@ -35,7 +33,7 @@ const Edit = ({ inputs, subTitle}) => {
     fetch(`https://backendch7.herokuapp.com/api/cars/${id}`)
       .then((res) => res.json())
       .then((data) => setData(data));
-  }, []);
+  });
 
   const handleChange = (name) => (e) => {
     const value = name === "image" ? e.target.files[0] : e.target.value;
