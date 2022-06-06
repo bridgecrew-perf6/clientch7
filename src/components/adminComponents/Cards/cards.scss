@@ -1,0 +1,10 @@
+.cardsContainer {
+  
+  .list-cards {
+    display: flex;
+    gap: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
