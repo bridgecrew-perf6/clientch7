@@ -30,7 +30,7 @@ const Edit = ({ inputs, subTitle}) => {
   });
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/cars/${id}`)
+    fetch(`https://backendch7.herokuapp.com/api/cars/${id}`)
       .then((res) => res.json())
       .then((data) => setData(data));
   });
@@ -59,7 +59,7 @@ const Edit = ({ inputs, subTitle}) => {
       formData.append("createdAt", data.createdAt);
       formData.append("updatedAt", data.updatedAt);
 
-      const res = await fetch(`http://localhost:5000/api/cars/${id}`, {
+      const res = await fetch(`https://backendch7.herokuapp.com/api/cars/${id}`, {
         method: "PUT",
         body: formData,
       });

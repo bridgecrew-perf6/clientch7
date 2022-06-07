@@ -3,14 +3,14 @@ import axios from "axios";
 
 export const getCars = createAsyncThunk("car/getCars", async() => {
     const response = await axios
-    .get(`http://localhost:5000/api/cars`);
+    .get(`https://backendch7.herokuapp.com/api/cars`);
     return response.data;
 }
 )
 
 export const getFilterCars = createAsyncThunk("car/getFilterCars", async({name}) => {
     const response = await axios
-    .get(`http://localhost:5000/api/cars?search=${name}`)
+    .get(`https://backendch7.herokuapp.com/api/cars?search=${name}`)
     return response.data;
 }
 )

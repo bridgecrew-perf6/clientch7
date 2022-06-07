@@ -52,7 +52,7 @@ const New = ({ subTitle }) => {
       formData.append("createdAt", data.createdAt);
       formData.append("updatedAt", data.updatedAt);
 
-      const res = await fetch(`http://localhost:5000/api/cars`, {
+      const res = await fetch(`https://backendch7.herokuapp.com/api/cars`, {
         method: "POST",
         body: formData,
       });

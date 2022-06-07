@@ -52,7 +52,7 @@ function App() {
 
   useEffect(() => {
     const getUser = async () => {
-      await fetch("http://localhost:5000/auth/login/success", {
+      await fetch("https://backendch7.herokuapp.com/auth/login/success", {
         method: "GET",
         credentials: "include",
         headers: {
@@ -100,12 +100,12 @@ function App() {
       <AppContext.Provider value={appContextValue}>
         <Routes>
         <Route path='/' element={user ? <Navigate to="/home" /> : <Login />} />
-            <Route path='/home' element={user && user.isAdmin == true ? <Navigate to="/dashboard" /> : <HomeLayout /> } />
+            <Route path='/home' element={user && user.isAdmin === true ? <Navigate to="/dashboard" /> : <HomeLayout /> } />
             <Route path='/login' element={user ? <Navigate to="/" /> : <Login/>} />
             <Route path='/cars' element={user ? <CardLayout /> : <Navigate to="/login" />} />
             <Route path='/cars/:id' element={user ? <DetailCardLayout /> : <Navigate to="/login" />} />
-            <Route path='/dashboard' element={ user && user.isAdmin == true ? (<Dashboard />) : (<Login />)} />
-            <Route path='/list-cars' element={ user && user.isAdmin == true ? (<CarsLayout />) : (<Login />)} />
+            <Route path='/dashboard' element={ user && user.isAdmin === true ? (<Dashboard />) : (<Login />)} />
+            <Route path='/list-cars' element={ user && user.isAdmin === true ? (<CarsLayout />) : (<Login />)} />
             <Route path='/add'element={ <New inputs={productInputs} subTitle="Add" /> }/>
             <Route path='/edit/:id'element={ <Edit inputs={productInputs} subTitle="Edit" /> }/>
         </Routes>
