@@ -42,7 +42,7 @@ export default function DetailCard() {
     const fetchcarByID = async ()=> {
         try {
             console.log(id)
-            const response = await axios.get(`https://backendch7.herokuapp.com/api/cars/${id}`);
+            const response = await axios.get(`http://localhost:5000/api/cars/${id}`);
             setCar(response.data)
         }catch(error) {
             console.log(error.message);

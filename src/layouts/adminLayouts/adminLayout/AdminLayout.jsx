@@ -86,7 +86,7 @@ export default function AdminLayout({children}) {
   };
 
   const logout =()=> {
-    window.open("https://backendch7.herokuapp.com/auth/logout", "_self");
+    window.open("http://localhost:5000/auth/logout", "_self");
   }
 
   return (

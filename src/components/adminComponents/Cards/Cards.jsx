@@ -20,7 +20,7 @@ const Cards = () => {
     const handleDelete = async (id) => {
         try {
           setLoadingButton(true)
-          const res = await fetch(`https://backendch7.herokuapp.com/api/cars/${id}`, {
+          const res = await fetch(`http://localhost:5000/api/cars/${id}`, {
             method: "DELETE",
           });
           if (res.ok) {

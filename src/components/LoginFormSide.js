@@ -12,10 +12,10 @@ export default function LoginFormSide() {
   const context = useContext(AppContext)
 
   const google = ()=> {
-    window.open("https://backendch7.herokuapp.com/auth/google", "_self");
+    window.open("http://localhost:5000/auth/google", "_self");
   }
   const github = ()=> {
-    window.open("https://backendch7.herokuapp.com/auth/github", "_self");
+    window.open("http://localhost:5000/auth/github", "_self");
   }
 
   return (
