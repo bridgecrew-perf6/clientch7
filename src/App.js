@@ -78,7 +78,7 @@ function App() {
   const handleClick = async(e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/login", {email, password})
+      const res = await axios.post("https://backendch7.herokuapp.com/api/login", {email, password})
       setUser(res.data);
       console.log(res.data)
     } catch (err) {
